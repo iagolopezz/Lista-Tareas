@@ -1,42 +1,94 @@
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
     padding: 2em;
+    margin: 0;
 }
 
 .container {
     max-width: 500px;
     margin: 0 auto;
-    color:#275bce;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 1.5em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #275bce;
+    margin-bottom: 1em;
 }
 
 #nueva-tarea {
     width: 70%;
-    padding: 1em;
+    padding: 0.8em 1em;
     border-radius: 1em;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-right: 0.5em;
 }
 
 #añadir-tarea {
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     border-radius: 1em;
-    background-color: blue;
-    color:whitesmoke
+    background-color: #275bce;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#añadir-tarea:hover{
-    background-color: aquamarine;
-
+#añadir-tarea:hover {
+    background-color: #1e4bb8;
 }
-#lista-tarea{
+
+#lista-tarea {
     list-style: none;
     padding: 0;
     margin-top: 1.5em;
 }
 
-.tarea{
+.tarea {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #eeeeeea9;
-    padding: 1.5em;
+    background-color: #f5f7fa;
+    padding: 1em 1.5em;
+    margin-bottom: 1em;
     border-radius: 1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.tarea.realizada {
+    background-color: #d1ffd1;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.tarea span {
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.tarea input[type="checkbox"] {
+    margin-right: 1em;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.borrar-boton {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.borrar-boton:hover {
+    transform: scale(1.2);
 }
